@@ -15,8 +15,8 @@ class UserServiceTest {
     @Test
     public void test() {
         UserService userSerivce = new UserService(repository);
-        String phoneNumber = "0908625027";
-        String userName = "Liu";
+        String phoneNumber = "0908625017";
+        String userName = "111";
         String email = "liu@gmail.com";
         String password = "abcd1234";
         String biography = "test biography";

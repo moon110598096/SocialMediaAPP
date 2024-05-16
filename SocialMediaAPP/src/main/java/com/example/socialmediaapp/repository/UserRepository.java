@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends CrudRepository<User, String> {
 
-    @Procedure(name = "add_user")
+    @Procedure(name = "addUser")
     void addUser(@Param("pUserID") String userID, @Param("pUserName")String userName,
                         @Param("pEmail") String email, @Param("pPassword") String password,
                         @Param("pBiography") String biography);
