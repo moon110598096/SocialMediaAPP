@@ -51,6 +51,17 @@ public class User {
     public String getBiography() {
         return biography;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", biography='" + biography + '\'' +
+                '}';
+    }
 }
 
 
