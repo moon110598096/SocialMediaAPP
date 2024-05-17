@@ -5,6 +5,7 @@ import com.example.socialmediaapp.repository.ArticleRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class ArticleServiceImpl implements ArticleService{
@@ -17,8 +18,9 @@ public class ArticleServiceImpl implements ArticleService{
 
     @Override
     public boolean addArticle(Article article) {
-        String articleID = "fffff";
+        String articleID = UUID.randomUUID().toString();
         articleRepository.addArticle(articleID, article.getAuthorID(), article.getContent());
+
         return true;
     }
 
