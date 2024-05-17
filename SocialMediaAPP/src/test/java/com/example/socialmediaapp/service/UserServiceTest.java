@@ -5,22 +5,28 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 class UserServiceTest {
+
     @Autowired
-    private UserRepository repository;
+    private UserRepository userRepository;
 
     @Test
-    public void test() {
-        UserService userSerivce = new UserService(repository);
-        String phoneNumber = "0908625017";
+    public void addNewUserTest() {
+        UserServiceImpl userSerivce = new UserServiceImpl(userRepository);
+        String phoneNumber = "1234567890";
         String userName = "111";
         String email = "liu@gmail.com";
         String password = "abcd1234";
         String biography = "test biography";
 
-        userSerivce.addNewUser(phoneNumber, userName, email, password, biography);
+        // first add new user
+        assertTrue(userSerivce.addUser(phoneNumber, userName, email, password, biography));
+
+        // When adding a duplicate user, it should return false
+        assertFalse(userSerivce.addUser(phoneNumber, userName, email, password, biography));
     }
 }
