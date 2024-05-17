@@ -12,7 +12,6 @@ const message = '13'
         <nav>
           <RouterLink to="/">Login</RouterLink>
           <RouterLink to="/post">Post</RouterLink>
-          <RouterLink to="/comment">Comment</RouterLink>
         </nav>
       </div>
     </header>
