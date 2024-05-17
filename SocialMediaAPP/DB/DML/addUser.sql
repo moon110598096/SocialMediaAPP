@@ -6,8 +6,8 @@ CREATE PROCEDURE add_user (
     IN pBiography TEXT,
 )
 BEGIN
-    INSERT INTO User(UserID, UserName, Email, Password, Biography)
-    values (pUserID, pUserName, pEmail, pPassword, pBiography);
+INSERT INTO User(UserID, UserName, Email, Password, Biography)
+values (pUserID, pUserName, pEmail, pPassword, pBiography);
 END
 
 

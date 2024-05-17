@@ -1,7 +1,7 @@
 CREATE procedure addPost (
-    IN p_postId varchar(15),
-    IN p_userId varchar(20),
-    IN p_content varchar(50)
+    IN p_postId char(100),
+    IN p_userId char(10),
+    IN p_content TEXT
 )
 BEGIN
 INSERT INTO Post(postId, userId, content)

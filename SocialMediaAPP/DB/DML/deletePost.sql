@@ -1,5 +1,5 @@
 CREATE procedure deletePost(
-    IN p_postId varchar(15)
+    IN p_postId varchar(100)
 )
 BEGIN
 UPDATE Post

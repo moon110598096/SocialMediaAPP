@@ -1,5 +1,5 @@
 CREATE procedure findUserById(
-    IN p_userId varchar(15)
+    IN p_userId char(10)
 )
 BEGIN
 SELECT * FROM User

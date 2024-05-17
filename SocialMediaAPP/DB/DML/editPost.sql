@@ -1,6 +1,6 @@
 CREATE procedure editPost(
-    IN p_postId varchar(15),
-    IN p_content varchar(50)
+    IN p_postId char(100),
+    IN p_content TEXT
 )
 BEGIN
 UPDATE Post
