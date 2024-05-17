@@ -1,6 +1,5 @@
 package com.example.socialmediaapp.service;
 
-import com.example.socialmediaapp.domain.Article;
 import com.example.socialmediaapp.domain.Comment;
 import com.example.socialmediaapp.repository.CommentRepository;
 import org.springframework.stereotype.Service;
@@ -19,8 +18,9 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public boolean addComment(Comment comment) {
         String commentID = UUID.randomUUID().toString();
-        return commentRepository.addComment(commentID, comment.getArticleID(),
-                comment.getUserId(), comment.getContent());
+        commentRepository.addComment(commentID, comment.getUserId(),
+                comment.getArticleID(),comment.getContent());
+        return true;
     }
 
     @Override

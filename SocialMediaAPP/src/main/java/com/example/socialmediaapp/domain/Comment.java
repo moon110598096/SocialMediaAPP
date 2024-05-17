@@ -9,13 +9,13 @@ import jakarta.persistence.Table;
 @Table(name = "Comment")
 public class Comment {
     @Id
-    @Column(name = "commentID")
+    @Column(name = "CommentID")
     private String commentID;
-    @Column(name = "articleID")
+    @Column(name = "PostID")
     private String articleID;
-    @Column(name = "userId")
+    @Column(name = "UserID")
     private String userID;
-    @Column(name = "content")
+    @Column(name = "Content")
     private String content;
 
     public Comment(){
@@ -47,6 +47,10 @@ public class Comment {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     @Override
