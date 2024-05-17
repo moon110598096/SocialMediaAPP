@@ -25,7 +25,7 @@ const router = createRouter({
       component: () => import ('../views/SignupView.vue')
     },
     {
-      path: '/post',
+      path: '/post/:userID/:userChecked',
       name: 'post',
       component: () => import ('../views/PostView.vue')
     },

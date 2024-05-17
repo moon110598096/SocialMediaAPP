@@ -11,7 +11,7 @@ const message = '13'
         <HelloWorld msg='' />
         <nav>
           <RouterLink to="/">Login</RouterLink>
-          <RouterLink to="/post">Post</RouterLink>
+<!--          <RouterLink to="/post">Post</RouterLink>-->
         </nav>
       </div>
     </header>
