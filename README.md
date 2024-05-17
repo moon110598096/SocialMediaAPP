@@ -15,6 +15,7 @@
   * 登入功能
   * 註冊功能
   * 文章發布功能
+  * 列出所有文章及發佈者
 # 資料夾結構
 * BackEnd
   * controller: 處理FrontEnd需求
