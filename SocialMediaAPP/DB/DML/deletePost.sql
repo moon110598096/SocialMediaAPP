@@ -1,8 +1,8 @@
 CREATE procedure deletePost(
-    IN p_postId varchar(100)
+    IN p_postId char(100)
 )
 BEGIN
 UPDATE Post
-SET removed = true
-WHERE postId = p_postId;
+SET Removed = true
+WHERE PostId = p_postId;
 END

@@ -4,6 +4,6 @@ CREATE procedure addPost (
     IN p_content TEXT
 )
 BEGIN
-INSERT INTO Post(postId, userId, content)
+INSERT INTO Post(PostId, UserID, Content)
 values (p_postId, p_userId, p_content);
 END

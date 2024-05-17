@@ -3,5 +3,5 @@ CREATE procedure findUserById(
 )
 BEGIN
 SELECT * FROM User
-WHERE userId = p_userId;
+WHERE UserID = p_userId;
 END

@@ -4,6 +4,6 @@ CREATE procedure editPost(
 )
 BEGIN
 UPDATE Post
-SET content = p_content
-WHERE postId = p_postId;
+SET Content = p_content
+WHERE PostId = p_postId;
 END
