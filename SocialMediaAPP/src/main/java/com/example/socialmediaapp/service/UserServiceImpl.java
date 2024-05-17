@@ -2,8 +2,9 @@ package com.example.socialmediaapp.service;
 
 import com.example.socialmediaapp.domain.User;
 import com.example.socialmediaapp.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Objects;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -15,18 +16,14 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public boolean addUser(String phoneNumber, String userName, String email, String password, String biography) {
-        if (userRepository.findById(phoneNumber).isPresent())
+    public boolean addUser(User user) {
+        if (userRepository.findById(user.getUserId()).isPresent())
             return false;
 
-        userRepository.addUser(phoneNumber, userName, email, password, biography);
+        userRepository.addUser(user.getUserId(), user.getUserName(), user.getEmail(),
+                user.getPassword(), user.getBiography());
 
         return true;
-    }
-
-    @Override
-    public boolean addUser(User user) {
-        return false;
     }
 
     @Override
@@ -40,7 +37,15 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User findUserById(String id) {
-        return null;
+    public User findUserById(String userId) {
+        return userRepository.findUserById(userId);
+    }
+
+    @Override
+    public boolean checkUser(String id, String passWord) {
+        User user = findUserById(id);
+        String userPassword = user.getPassword();
+
+        return Objects.equals(userPassword,passWord);
     }
 }

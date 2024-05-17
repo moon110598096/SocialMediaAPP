@@ -14,6 +14,14 @@ public class UserController {
 
     @PostMapping(path = "/user")
     public boolean addUser(@RequestBody User user) {
+        System.out.println(user.toString());
         return userService.addUser(user);
+    }
+
+    @PostMapping(path = "/login")
+    public boolean checkUser(@RequestBody User user) {
+        System.out.println(user.getUserId());
+        System.out.println(user.getPassword());
+        return userService.checkUser(user.getUserId(), user.getPassword());
     }
 }
