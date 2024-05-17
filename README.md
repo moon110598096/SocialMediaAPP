@@ -12,6 +12,9 @@
     * 新增留言 
 * FrontEnd
   * 各頁面*View.vue建置完成
+  * 登入功能
+  * 註冊功能
+  * 文章發布功能
 # 資料夾結構
 * BackEnd
   * controller: 處理FrontEnd需求
