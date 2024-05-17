@@ -11,9 +11,9 @@ public class Article {
 
 
     @Id
-    @Column(name = "PostId")
+    @Column(name = "PostID")
     private String articleID;
-    @Column(name = "UserId")
+    @Column(name = "UserID")
     private String authorID;
     @Column(name = "Content")
     private String content;
