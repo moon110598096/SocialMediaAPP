@@ -17,7 +17,7 @@ public interface ArticleRepository extends CrudRepository<Article, String> {
     void editArticle(String p_postId, String p_content);
 
     @Procedure("deletePost")
-    void editArticle(String p_postId);
+    void deleteArticle(String p_postId);
 
     @Query(value = "CALL findAllPost", nativeQuery = true)
     List<Article> findAllPost();

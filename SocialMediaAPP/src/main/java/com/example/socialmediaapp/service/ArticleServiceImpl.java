@@ -29,16 +29,13 @@ public class ArticleServiceImpl implements ArticleService{
         if (articleRepository.findById(article.getArticleID()).isPresent())
             return false;
 
-        articleRepository.editArticle(article.getArticleID());
+        articleRepository.editArticle(article.getArticleID(), article.getContent());
         return true;
     }
 
     @Override
     public boolean deleteArticle(Article article) {
-        if (articleRepository.findById(article.getArticleID()).isPresent())
-            return false;
-
-        articleRepository.deleteById(article.getArticleID());
+        articleRepository.deleteArticle(article.getArticleID());
         return true;
     }
 

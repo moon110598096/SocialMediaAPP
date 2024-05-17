@@ -8,8 +8,6 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Post")
 public class Article {
-
-
     @Id
     @Column(name = "PostID")
     private String articleID;
