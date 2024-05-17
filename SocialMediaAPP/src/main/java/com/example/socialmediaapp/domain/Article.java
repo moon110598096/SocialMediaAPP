@@ -8,6 +8,8 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Post")
 public class Article {
+
+
     @Id
     @Column(name = "PostId")
     private String articleID;
@@ -29,15 +31,19 @@ public class Article {
         return authorID;
     }
 
-    public void setAuthorID(String authorID) {
-        this.authorID = authorID;
-    }
-
     public String getContent() {
         return content;
     }
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getArticleID() {
+        return articleID;
+    }
+
+    public void setArticleID(String articleID) {
+        this.articleID = articleID;
     }
 }
