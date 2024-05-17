@@ -1,23 +1,35 @@
 package com.example.socialmediaapp.domain;
 
-import java.util.List;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "Post")
 public class Article {
-    private int authorID;
+    @Id
+    @Column(name = "PostId")
+    private String articleID;
+    @Column(name = "UserId")
+    private String authorID;
+    @Column(name = "Content")
     private String content;
-    private List<String> comments;
 
-    public Article(int authorID, String content, List<String> comments) {
+    public Article(String authorID, String content) {
         this.authorID = authorID;
         this.content = content;
-        this.comments = comments;
     }
 
-    public int getAuthorID() {
+    public Article() {
+
+    }
+
+    public String getAuthorID() {
         return authorID;
     }
 
-    public void setAuthorID(int authorID) {
+    public void setAuthorID(String authorID) {
         this.authorID = authorID;
     }
 
@@ -27,17 +39,5 @@ public class Article {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public List<String> getComments() {
-        return comments;
-    }
-
-    public void setComments(List<String> comments) {
-        this.comments = comments;
-    }
-
-    public void addComment(String comment) {
-        comments.add(comment);
     }
 }
