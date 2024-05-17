@@ -12,7 +12,12 @@
     * 新增留言 
 * FrontEnd
   * 各頁面*View.vue建置完成
-    
+# 資料夾結構
+* BackEnd
+  * controller: 處理FrontEnd需求
+  * domain: 放置Entity
+  * repository: 與Database互動
+  * service: 處理業務邏輯
 # 版本資訊
 ### BackEnd
 * Oracle OpenJDK 17.0.2
