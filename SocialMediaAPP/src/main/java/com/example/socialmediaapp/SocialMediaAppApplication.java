@@ -18,9 +18,9 @@ public class SocialMediaAppApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/user/*").allowedOrigins("http://localhost:5174");
-				registry.addMapping("/api/article/*").allowedOrigins("http://localhost:5174");
-				registry.addMapping("/api/comment/*").allowedOrigins("http://localhost:5174");
+				registry.addMapping("//api/user/*").allowedOrigins("http://localhost:5174");
+				registry.addMapping("//api/article/*").allowedOrigins("http://localhost:5174");
+				registry.addMapping("//api/comment/*").allowedOrigins("http://localhost:5174");
 			}
 		};
 	}
