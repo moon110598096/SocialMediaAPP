@@ -7,17 +7,18 @@ CREATE TABLE User (
 );
 
 CREATE TABLE Post (
-    PostID CHAR(20) PRIMARY KEY,
+    PostID CHAR(100) PRIMARY KEY,
     UserID CHAR(10),
     Content TEXT,
     CreatedAt TIMESTAMP,
+    Removed Boolean,
     FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
 
 CREATE TABLE Comment (
     CommentID CHAR(20) PRIMARY KEY,
     UserID CHAR(10),
-    PostID CHAR(20),
+    PostID CHAR(100),
     Content TEXT,
     CreatedAt TIMESTAMP,
     FOREIGN KEY (UserID) REFERENCES User(UserID),
