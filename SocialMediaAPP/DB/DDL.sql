@@ -16,7 +16,7 @@ CREATE TABLE Post (
 );
 
 CREATE TABLE Comment (
-    CommentID CHAR(20) PRIMARY KEY,
+    CommentID CHAR(100) PRIMARY KEY,
     UserID CHAR(10),
     PostID CHAR(100),
     Content TEXT,
