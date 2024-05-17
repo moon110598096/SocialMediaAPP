@@ -5,6 +5,8 @@ import com.example.socialmediaapp.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path="/api/article")
 public class ArticleController {
@@ -25,5 +27,10 @@ public class ArticleController {
     @PutMapping(path = "/article")
     public boolean editPost(@RequestBody Article article) {
         return articleService.updateArticle(article);
+    }
+
+    @GetMapping(path = "/article")
+    public List<Article> getAllPost() {
+        return articleService.findAllArticle();
     }
 }
