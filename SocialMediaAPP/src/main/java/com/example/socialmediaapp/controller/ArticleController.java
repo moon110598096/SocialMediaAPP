@@ -21,4 +21,9 @@ public class ArticleController {
     public boolean deletePost(@RequestBody Article article) {
         return articleService.deleteArticle(article);
     }
+
+    @PutMapping(path = "/article")
+    public boolean editPost(@RequestBody Article article) {
+        return articleService.updateArticle(article);
+    }
 }

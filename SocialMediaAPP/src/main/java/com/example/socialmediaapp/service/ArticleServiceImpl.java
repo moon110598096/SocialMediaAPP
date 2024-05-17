@@ -26,9 +26,6 @@ public class ArticleServiceImpl implements ArticleService{
 
     @Override
     public boolean updateArticle(Article article) {
-        if (articleRepository.findById(article.getArticleID()).isPresent())
-            return false;
-
         articleRepository.editArticle(article.getArticleID(), article.getContent());
         return true;
     }
