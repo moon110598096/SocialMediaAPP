@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Front End ###
+frontEnd/vue/.vite
+
+### Personal Data ###
+/DB/dbInfo.txt
+/src/test/java/com/example/socialmediaapp/SocialMediaAppApplicationTests.java
